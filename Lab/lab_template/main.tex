@@ -1,0 +1,147 @@
+
+\documentclass[12pt,UTF8, openany]{ctexart}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Loading packages that alter the style
+\usepackage[]{graphi cx}
+\usepackage[]{color}
+\usepackage{alltt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{12pt}
+
+% Set page margins
+\usepackage[top=60pt,bottom=60pt,left=78pt,right=78pt]{geometry}
+\usepackage{subcaption}
+% Package used for placeholder text
+\usepackage{lipsum}
+\usepackage{booktabs}
+\usepackage{multirow}
+% Prevents LaTeX from filling out a page to the bottom
+\raggedbottom
+
+% Adding both languages
+\usepackage[english]{babel}
+
+% All page numbers positioned at the bottom of the page
+\usepackage{fancyhdr}
+\fancyhf{} % clear all header and footers
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\pagestyle{fancy}
+
+% Changes the style of chapter headings
+\usepackage{titlesec}
+\titleformat{\chapter}
+{\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
+% Change distance between chapter header and text
+\titlespacing{\chapter}{0pt}{40pt}{2\baselineskip}
+
+% Adds table captions above the table per default
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+% Adds space between caption and table
+\usepackage[tableposition=top]{caption}
+
+% add cc license
+\usepackage[
+type={CC},
+modifier={by-nc-sa},
+version={4.0},
+]{doclicense}
+
+% Adds hyperlinks to references and ToC
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+
+% Uncomment the line below this block to set all hyperlink color to black
+\hypersetup{
+	colorlinks,
+	linkcolor={blue},
+	citecolor={green!90!black},
+	urlcolor={red!70!black}
+}
+%\hypersetup{hidelinks,linkcolor = black} % Changes the link color to black and hides the hideous red border that usually is created
+
+% Set specific color for hyperref
+\usepackage{xcolor}
+
+
+% tcolorbox; Notice! add "-shell-escape" to the compile command
+\usepackage{tcolorbox}
+
+% If multiple images are to be added, a folder (path) with all the images can be added here 
+\graphicspath{ {Figures/} }
+
+% Separates the first part of the report/thesis in Roman numerals
+% \frontmatter
+
+% Uncomment to stop the new chapter start at a new page
+%\usepackage{etoolbox}
+%\makeatletter
+%\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+%\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starts the document
+\begin{document}
+	
+	%%% Selects the language to be used for the first couple of pages
+	\selectlanguage{english}
+	
+	%%%%% Adds the title page
+	\begin{titlepage}
+		\clearpage\thispagestyle{empty}
+		\centering
+		\vspace{1cm}
+		
+		% Titles
+		% Information about the University
+		{\
+			\textsc{Introduction To The Theory Of Computation Michael Sipser}
+		}
+		\vspace{2.5cm}
+		
+		\rule{\linewidth}{2mm} \\[0.5cm]
+		{ \Huge \bfseries Introduction To The Theory Of Computation Michael Sipser\\[0.2em]
+			计算理论导论}\\[0.5cm]
+		\rule{\linewidth}{0.6mm} \\[1.5cm]
+		
+		\hspace{2cm}
+		\begin{tabular}{l p{5cm}}
+			\textbf{Name} & 屈 德 林 \\[10pt]
+			\textbf{Student No.} & 201808010522 \\[10pt]
+			\textbf{Class} & 计算机科学与技术 1805 \\[10pt]
+			\textbf{Department} & CSEE \\[10pt]
+			\textbf{Email} & \texttt{qdl.cs@qq.com} \\[10pt]
+			\textbf{Date} & \today \\            
+		\end{tabular}
+		
+		
+		\vfill
+		% Light logo and Dark logo
+		\centering \includegraphics[height=3.5cm]{bit_logo.png}\\ % light logo
+		%\centering \includegraphics[height=4cm]{logo_01}\\ % dark logo
+		\centering \includegraphics[scale=0.3]{logo_slogan.png}
+		\vspace{0.5cm}
+		
+		
+		\pagebreak
+		
+	\end{titlepage}
+	
+	% Adds a table of contents keep the link black
+	{\hypersetup{linkcolor=black}
+		% or \hypersetup{linkcolor=black}, if the colorlinks=true option of hyperref is used
+		\tableofcontents{}
+	}
+	
+
+	
+\end{document}

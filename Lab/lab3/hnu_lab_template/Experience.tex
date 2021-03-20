@@ -1,0 +1,12 @@
+\section{Lab Experience 心得}
+\subsection{实验心得}
+\begin{enumerate}
+    \item 本次实验难度适中，因为在教材中都能找到NFA确定化和DFA最小的的算法。
+    子集法虽然很容易理解，但是在算法实现过程中仍然有很多需要注意的地方。
+    在本题中，由于起始状态集合和接受状态集合都是用特征串对应的整数所表示，子集法可能并不是最佳的解题方法，因为特征串用递归的方式处理往往会更加方便。
+    \item 对特征串的处理也值得注意：
+    \begin{itemize}
+        \item x$\wedge $ $-$x: lowbit运算，返回最低位1表示的值
+        \item lowbit x $\oplus$ x运算: 剔除最低位的1
+    \end{itemize}
+\end{enumerate}

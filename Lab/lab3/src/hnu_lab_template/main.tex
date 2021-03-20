@@ -1,0 +1,63 @@
+\documentclass{hnureport}
+\usepackage{xeCJK} %调用 xeCJK 宏包
+\setCJKmainfont{SimSun} %设置 CJK 主字体为 SimSun （宋体
+
+\renewcommand{\abstractname}{\large Abstract\\}%重定义摘要二字的大小
+\begin{document}
+\begin{titlepage}
+    \clearpage\thispagestyle{empty}
+    \centering
+    \vspace{1cm}
+    % Titles
+    {\
+        \textsc{Introduction To The Theory Of Computation Michael Sipser}
+    }
+    \vspace{2.5cm}
+    
+    \rule{\linewidth}{2mm} \\[0.5cm]
+    { \Huge \bfseries Introduction To The Theory Of Computation Michael Sipser\\[0.2em]
+        计算理论导论}\\[0.5cm]
+    \rule{\linewidth}{0.6mm} \\[1.5cm]
+    
+    \hspace{2cm}
+    \begin{tabular}{l p{5cm}}
+        \textbf{LAB} & 实验C----NFA转换为DFA \\[10pt]
+        \textbf{Name} & 屈 德 林 \\[10pt]
+        \textbf{Student No.} & 201808010522 \\[10pt]
+        \textbf{Class} & 计算机科学与技术 1805 \\[10pt]
+        \textbf{Department} & CSEE \\[10pt]
+        \textbf{Email} & \texttt{qdl.cs@qq.com} \\[10pt]
+        \textbf{Date} & \today \\            
+    \end{tabular}
+    
+    % logo
+    \vfill
+    \centering \includegraphics[height=3.5cm]{Figure/HNUlogo.pdf}\\ % light logo
+    \centering \includegraphics[scale=0.3]{Figure/logo_slogan.png}
+    \vspace{0.5cm}
+
+    \pagebreak
+\end{titlepage}
+
+% \input{abstract.tex}    %摘要
+\thispagestyle{empty}
+\tableofcontents
+\newpage 
+\setcounter{page}{1}
+% 问题描述：Target
+\input{Target.tex}
+% 实验环境：Environment
+\input{Environment.tex}
+\newpage
+% 实验步骤：Steps
+\input{Steps.tex}
+\newpage
+% 实验结果：Results
+\input{Results.tex}
+% 实验心得：Experience
+\input{Experience.tex}
+\appendix
+% 附录
+\input{appendix.tex}
+
+\end{document}
