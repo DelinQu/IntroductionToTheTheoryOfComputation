@@ -2,9 +2,9 @@
 #include <cstring>
 using namespace std;
 int n,m,t,a;
-int s[1000][1000],F[1000];                     // 状态转换矩阵和接受状态集
+int s[1000][1000],F[1000];                      // 状态转换矩阵和接受状态集
 int main(){
-    while(scanf("%d%d%d%d",&n,&m,&t,&a)!=EOF){                     // 多个序列输入
+    while(scanf("%d%d%d%d",&n,&m,&t,&a)!=EOF){  // 多个序列输入
         memset(s,0,sizeof(s));                  // 初始化为0
         memset(F,0,sizeof(F));
         // 状态转换矩阵
